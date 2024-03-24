@@ -4,8 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -53,21 +51,21 @@
   }
 }
 
-
-
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   height: 100svh;
 }
-#__next{
+#__next {
   height: 100%;
 }
-html{
+html {
   font-size: 14px;
 }
 
@@ -84,13 +82,12 @@ html{
   border-radius: 10px;
 }
 
-
 #slider::-webkit-scrollbar {
   display: none;
 }
 
-@media screen and (min-width: 768px){
-  html{
+@media screen and (min-width: 768px) {
+  html {
     font-size: 18px;
   }
 }
