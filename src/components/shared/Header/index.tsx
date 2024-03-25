@@ -37,7 +37,7 @@ export const Header = () => {
           </a>
         </Tooltip>
         <Tooltip text='Cart' className='flex items-center justify-center'>
-          <button className='text-sm flex items-center gap-2 group'>
+          <button title='Search' className='text-sm flex items-center gap-2 group'>
             <div className='relative'>
               <HiOutlineShoppingBag className='size-6' />
               <span className='absolute -top-2 -right-2 size-5 leading-none bg-foreground text-background text-[10px] flex items-center justify-center rounded-full'>
@@ -65,8 +65,8 @@ const SearchTrigger = () => {
     <>
       {isVisible ? (
         <div className='w-full bg-background absolute z-10 left-0 top-0 h-full flex items-center pl-6'>
-          <Tooltip text='Back' className='flex items-center justify-center'>
-            <button onClick={hide}>
+          <Tooltip text='Go Back' className='flex items-center justify-center'>
+            <button title='Go Back' onClick={hide}>
               <BiArrowBack />
             </button>
           </Tooltip>
@@ -74,7 +74,7 @@ const SearchTrigger = () => {
         </div>
       ) : (
         <Tooltip text='Search' className='flex items-center justify-center'>
-          <button onClick={show} className='md:hidden'>
+          <button title='Search' onClick={show} className='md:hidden'>
             <IoIosSearch className='size-6' />
           </button>
         </Tooltip>
