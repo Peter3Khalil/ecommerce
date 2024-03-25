@@ -6,3 +6,4 @@ export { AiOutlineAppstore } from 'react-icons/ai'
 export { HiOutlineUser } from "react-icons/hi";
 export { HiOutlineShoppingBag } from 'react-icons/hi2'
 export { BiArrowBack } from "react-icons/bi";
+export { PiDress as DressIcon } from "react-icons/pi";
