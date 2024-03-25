@@ -8,7 +8,6 @@ import {
   IoIosSearch,
 } from '@/components/shared/Icons';
 import { Search } from './Search';
-import { Tooltip } from '../Tooltip';
 
 export const Header = () => {
   return (
@@ -25,30 +24,29 @@ export const Header = () => {
       <Search />
       <div className='flex items-center gap-5 md:gap-3 shrink-0'>
         <SearchTrigger />
-        <Tooltip text='Contact Us' className='flex items-center justify-center'>
-          <a
-            href='tel:+201234566'
-            className='text-sm flex items-center gap-2 group'
-          >
-            <MdHeadphones className='size-6' />
-            <span className='text-muted-foreground hidden md:inline-block group-hover:text-foreground'>
-              +201234566
+        <a
+          href='tel:+201234566'
+          className='text-sm flex items-center gap-2 group'
+        >
+          <MdHeadphones className='size-6' />
+          <span className='text-muted-foreground hidden md:inline-block group-hover:text-foreground'>
+            +201234566
+          </span>
+        </a>
+        <button
+          title='Search'
+          className='text-sm flex items-center gap-2 group'
+        >
+          <div className='relative'>
+            <HiOutlineShoppingBag className='size-6' />
+            <span className='absolute -top-2 -right-2 size-5 leading-none bg-foreground text-background text-[10px] flex items-center justify-center rounded-full'>
+              15
             </span>
-          </a>
-        </Tooltip>
-        <Tooltip text='Cart' className='flex items-center justify-center'>
-          <button title='Search' className='text-sm flex items-center gap-2 group'>
-            <div className='relative'>
-              <HiOutlineShoppingBag className='size-6' />
-              <span className='absolute -top-2 -right-2 size-5 leading-none bg-foreground text-background text-[10px] flex items-center justify-center rounded-full'>
-                15
-              </span>
-            </div>
-            <span className='text-muted-foreground hidden md:inline-block group-hover:text-foreground'>
-              $0.00
-            </span>
-          </button>
-        </Tooltip>
+          </div>
+          <span className='text-muted-foreground hidden md:inline-block group-hover:text-foreground'>
+            $0.00
+          </span>
+        </button>
       </div>
     </header>
   );
@@ -65,19 +63,15 @@ const SearchTrigger = () => {
     <>
       {isVisible ? (
         <div className='w-full bg-background absolute z-10 left-0 top-0 h-full flex items-center pl-6'>
-          <Tooltip text='Go Back' className='flex items-center justify-center'>
-            <button title='Go Back' onClick={hide}>
-              <BiArrowBack />
-            </button>
-          </Tooltip>
+          <button title='Go Back' onClick={hide}>
+            <BiArrowBack />
+          </button>
           <Search showIcon={false} className='flex h-full border-0' />
         </div>
       ) : (
-        <Tooltip text='Search' className='flex items-center justify-center'>
-          <button title='Search' onClick={show} className='md:hidden'>
-            <IoIosSearch className='size-6' />
-          </button>
-        </Tooltip>
+        <button title='Search' onClick={show} className='md:hidden'>
+          <IoIosSearch className='size-6' />
+        </button>
       )}
     </>
   );
