@@ -6,16 +6,16 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
-interface TooltipProps extends React.HTMLProps<HTMLDivElement>,React.ComponentProps<typeof TooltipContent> {
+interface TooltipProps extends React.HTMLProps<HTMLDivElement> {
   children: React.ReactNode;
   text: string;
 }
-export const Tooltip: FC<TooltipProps> = ({ children,text,side,className }) => {
+export const Tooltip: FC<TooltipProps> = ({ children, text,className }) => {
   return (
     <TooltipProvider>
       <TooltipPrimitive>
         <TooltipTrigger className={className}>{children}</TooltipTrigger>
-        <TooltipContent side={side}>
+        <TooltipContent>
           <p>{text}</p>
         </TooltipContent>
       </TooltipPrimitive>

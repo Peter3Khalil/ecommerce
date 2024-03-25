@@ -1,4 +1,4 @@
-export { SlMenu as MenuIcon } from 'react-icons/sl'
+export { SlMenu } from 'react-icons/sl'
 export { FaArrowRightLong } from "react-icons/fa6";
 export { IoIosArrowForward,IoIosSearch } from 'react-icons/io'
 export { MdOutlineLink,MdOutlineShoppingBag,MdHeadphones } from "react-icons/md";
